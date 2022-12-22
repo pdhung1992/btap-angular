@@ -1,0 +1,13 @@
+.about-us{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: justify;
+  line-height: 2;
+}
+.about-us a{
+  text-decoration: none;
+}
+.about-us .card{
+  margin-bottom: 10px;
+  text-align: center;
+}

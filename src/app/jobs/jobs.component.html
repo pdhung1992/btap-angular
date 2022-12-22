@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col-8 job-detail">
+      <div *ngFor="let j of job">
+        <div *ngIf="j.id == id">
+          <h2>{{j.tittle}}</h2>
+          <hr>
+          <h4>Mô tả công việc: </h4>
+          <p>{{j.desc}}</p>
+          <br>
+          <h4>Yêu cầu công việc: </h4>
+          <p>{{j.require}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-4 job-detail">
+      <div *ngFor="let j of job">
+        <div *ngIf="j.id == id">
+          <div class="card">
+            <div class="card-body">
+              <h2>{{j.tittle}}</h2>
+              <hr>
+              <p><i class="bi bi-currency-dollar"></i> {{j.salary}}</p>
+              <p><i class="bi bi-geo-alt"></i> {{j.location}}</p>
+              <p><i class="bi bi-calendar"></i> {{j.deadline}}</p>
+              <button type="button" class="btn btn-lg btn-warning" style="width: 100%">Ứng tuyển ngay</button>
+            </div>
+          </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>

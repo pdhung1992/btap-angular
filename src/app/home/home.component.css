@@ -1,0 +1,21 @@
+.home{
+  margin-top: 70px;
+}
+.home-item img{
+  border-radius: 10px;
+  box-shadow: 0px 0px 13px 0px #00000040;
+}
+.home-item a{
+  text-decoration: none;
+  color: #E57905;
+  text-align: center;
+}
+.home-item p{
+  color: #E57905;
+  text-align: center;
+}
+.must-try h2{
+  color: #E57905;
+  text-align: center;
+}
+

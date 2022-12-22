@@ -1,0 +1,259 @@
+<div class="row">
+  <div class="col-3">
+    <div id="sidebar">
+      <div>
+        <div *ngFor="let p of products">
+          <div *ngIf="p.id == id">
+            <div *ngIf="p.category == 'cafe'">
+              <h2 style="color: #E57905">Thực đơn</h2>
+              <a routerLink="/categories/cafe"><button class="btn btn-lg btn-outline-light btn-menu" style="width: 80%">
+                Cà phê
+              </button></a>
+              <a routerLink="/categories/tea"><button class="btn btn-lg btn-outline-light btn-menu"style="width: 80%">
+                Trà
+              </button></a>
+              <a routerLink="/categories/cloudtea"><button class="btn btn-lg btn-outline-light btn-menu"style="width: 80%">
+                CloudTea
+              </button></a>
+              <a routerLink="/categories/cake"><button class="btn btn-lg btn-outline-light btn-menu"style="width: 80%">
+                Bánh
+              </button></a>
+            </div>
+            <div *ngIf="p.category == 'tea'">
+              <h2 style="color: #E57905">Thực đơn</h2>
+              <a routerLink="/categories/cafe"><button class="btn btn-lg btn-outline-light btn-menu" style="width: 80%">
+                Cà phê
+              </button></a>
+              <a routerLink="/categories/tea"><button class="btn btn-lg btn-outline-light btn-menu"style="width: 80%">
+                Trà
+              </button></a>
+              <a routerLink="/categories/cloudtea"><button class="btn btn-lg btn-outline-light btn-menu"style="width: 80%">
+                CloudTea
+              </button></a>
+              <a routerLink="/categories/cake"><button class="btn btn-lg btn-outline-light btn-menu"style="width: 80%">
+                Bánh
+              </button></a>
+            </div>
+            <div *ngIf="p.category == 'cake'">
+              <h2 style="color: #E57905">Thực đơn</h2>
+              <a routerLink="/categories/cafe"><button class="btn btn-lg btn-outline-light btn-menu" style="width: 80%">
+                Cà phê
+              </button></a>
+              <a routerLink="/categories/tea"><button class="btn btn-lg btn-outline-light btn-menu"style="width: 80%">
+                Trà
+              </button></a>
+              <a routerLink="/categories/cloudtea"><button class="btn btn-lg btn-outline-light btn-menu"style="width: 80%">
+                CloudTea
+              </button></a>
+              <a routerLink="/categories/cake"><button class="btn btn-lg btn-outline-light btn-menu"style="width: 80%">
+                Bánh
+              </button></a>
+            </div>
+            <div *ngIf="p.category == 'cloudtea'">
+              <h2 style="color: #E57905">Thực đơn</h2>
+              <a routerLink="/categories/cafe"><button class="btn btn-lg btn-outline-light btn-menu" style="width: 80%">
+                Cà phê
+              </button></a>
+              <a routerLink="/categories/tea"><button class="btn btn-lg btn-outline-light btn-menu"style="width: 80%">
+                Trà
+              </button></a>
+              <a routerLink="/categories/cloudtea"><button class="btn btn-lg btn-outline-light btn-menu"style="width: 80%">
+                CloudTea
+              </button></a>
+              <a routerLink="/categories/cake"><button class="btn btn-lg btn-outline-light btn-menu"style="width: 80%">
+                Bánh
+              </button></a>
+            </div>
+            <div *ngIf="p.category == 'home-cafe'">
+              <h2 style="color: #E57905">Dùng tại nhà</h2>
+              <a routerLink="/categories/home-cafe"><button class="btn btn-lg btn-outline-light btn-menu" style="width: 70%">
+                Cà phê tại nhà
+              </button></a>
+              <a routerLink="/categories/home-tea"><button class="btn btn-lg btn-outline-light btn-menu"style="width: 70%">
+                Trà tại nhà
+              </button></a>
+              <a routerLink="/categories/snack"><button class="btn btn-lg btn-outline-light btn-menu"style="width: 70%">
+                Snack
+              </button></a>
+            </div>
+            <div *ngIf="p.category == 'home-tea'">
+              <h2 style="color: #E57905">Dùng tại nhà</h2>
+              <a routerLink="/categories/home-cafe"><button class="btn btn-lg btn-outline-light btn-menu" style="width: 70%">
+                Cà phê tại nhà
+              </button></a>
+              <a routerLink="/categories/home-tea"><button class="btn btn-lg btn-outline-light btn-menu"style="width: 70%">
+                Trà tại nhà
+              </button></a>
+              <a routerLink="/categories/snack"><button class="btn btn-lg btn-outline-light btn-menu"style="width: 70%">
+                Snack
+              </button></a>
+            </div>
+            <div *ngIf="p.category == 'snack'">
+              <h2 style="color: #E57905">Dùng tại nhà</h2>
+              <a routerLink="/categories/home-cafe"><button class="btn btn-lg btn-outline-light btn-menu" style="width: 70%">
+                Cà phê tại nhà
+              </button></a>
+              <a routerLink="/categories/home-tea"><button class="btn btn-lg btn-outline-light btn-menu"style="width: 70%">
+                Trà tại nhà
+              </button></a>
+              <a routerLink="/categories/snack"><button class="btn btn-lg btn-outline-light btn-menu"style="width: 70%">
+                Snack
+              </button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-9">
+    <div *ngFor="let p of products">
+      <div *ngIf="p.id == id">
+        <div class="menu_content row">
+          <div class="col-5">
+            <img class="item-img" [src]="p.img">
+          </div>
+          <div class="col-7">
+            <h4>{{p.title}}</h4>
+            <h4 class="item-price">{{p.price}}đ</h4>
+            <form method="get" action="">
+              <div *ngIf="p.size == 'y'">
+                <h5>Chọn Size (bắt buộc)</h5>
+                <div class="get-item-option item-size">
+                  <input type="radio" name="size" value="0" class="btn-check" id="size-s" autocomplete="off" required>
+                  <label class="btn btn-outline-warning btn-choice" for="size-s">Nhỏ</label>
+                  <input type="radio" name="size" value="5000" class="btn-check" id="size-m" autocomplete="off" required>
+                  <label class="btn btn-outline-warning btn-choice" for="size-m">Vừa (+5.000đ)</label>
+                  <input type="radio" name="size" value="0" class="btn-check" id="size-l" autocomplete="off" required>
+                  <label class="btn btn-outline-warning btn-choice" for="size-l">Lớn (+10.000đ)</label>
+                </div>
+              </div>
+              <div *ngIf="p.category == 'cafe'">
+                <h5>Topping (tùy chọn)</h5>
+                <div class="get-item-option item-topping">
+                  <input type="checkbox" name="topping" value="10000" class="btn-check" id="tp-kemmac" autocomplete="off">
+                  <label class="btn btn-outline-warning btn-choice" for="tp-kemmac">Kem phô mai Macchiato (+10.000đ)</label>
+                  <input type="checkbox" name="topping" value="10000" class="btn-check" id="tp-shoesp" autocomplete="off">
+                  <label class="btn btn-outline-warning btn-choice" for="tp-shoesp">Shot Espresso (+10.000đ)</label>
+                  <input type="checkbox" name="topping" value="10000" class="btn-check" id="tp-trchau" autocomplete="off">
+                  <label class="btn btn-outline-warning btn-choice" for="tp-trchau">Trân châu trắng (+10.000đ)</label>
+                  <input type="checkbox" name="topping" value="10000" class="btn-check" id="tp-sotcar" autocomplete="off">
+                  <label class="btn btn-outline-warning btn-choice" for="tp-sotcar">Sốt Caramel (+10.000đ)</label>
+                  <input type="checkbox" name="topping" value="10000" class="btn-check" id="tp-thacaf" autocomplete="off">
+                  <label class="btn btn-outline-warning btn-choice" for="tp-thacaf">Thạch cà phê (+10.000đ)</label>
+                </div>
+              </div>
+              <div *ngIf="p.category == 'cloudtea'">
+                <h5>Topping (tùy chọn)</h5>
+                <div class="get-item-option item-topping">
+                  <input type="checkbox" name="topping" value="10000" class="btn-check" id="tp-kemmac" autocomplete="off">
+                  <label class="btn btn-outline-warning btn-choice" for="tp-kemmac">Kem phô mai Macchiato (+10.000đ)</label>
+                  <input type="checkbox" name="topping" value="10000" class="btn-check" id="tp-shoesp" autocomplete="off">
+                  <label class="btn btn-outline-warning btn-choice" for="tp-shoesp">Shot Espresso (+10.000đ)</label>
+                  <input type="checkbox" name="topping" value="10000" class="btn-check" id="tp-trchau" autocomplete="off">
+                  <label class="btn btn-outline-warning btn-choice" for="tp-trchau">Trân châu trắng (+10.000đ)</label>
+                  <input type="checkbox" name="topping" value="10000" class="btn-check" id="tp-sotcar" autocomplete="off">
+                  <label class="btn btn-outline-warning btn-choice" for="tp-sotcar">Sốt Caramel (+10.000đ)</label>
+                  <input type="checkbox" name="topping" value="10000" class="btn-check" id="tp-thacaf" autocomplete="off">
+                  <label class="btn btn-outline-warning btn-choice" for="tp-thacaf">Thạch cà phê (+10.000đ)</label>
+                </div>
+              </div>
+              <div *ngIf="p.category == 'tea'">
+                <h5>Topping (tùy chọn)</h5>
+                <div class="get-item-option item-topping">
+                  <input type="checkbox" name="topping" value="10000" class="btn-check" id="tp-kemmac" autocomplete="off">
+                  <label class="btn btn-outline-warning btn-choice" for="tp-kemmac">Kem phô mai Macchiato (+10.000đ)</label>
+                  <input type="checkbox" name="topping" value="10000" class="btn-check" id="tp-trchau" autocomplete="off">
+                  <label class="btn btn-outline-warning btn-choice" for="tp-trchau">Trân châu trắng (+10.000đ)</label>
+                  <input type="checkbox" name="topping" value="10000" class="btn-check" id="tp-dao" autocomplete="off">
+                  <label class="btn btn-outline-warning btn-choice" for="tp-dao">Đào miếng (+10.000đ)</label>
+                  <input type="checkbox" name="topping" value="10000" class="btn-check" id="tp-vai" autocomplete="off">
+                  <label class="btn btn-outline-warning btn-choice" for="tp-vai">Trái vải (+10.000đ)</label>
+                  <input type="checkbox" name="topping" value="10000" class="btn-check" id="tp-sen" autocomplete="off">
+                  <label class="btn btn-outline-warning btn-choice" for="tp-sen">Hạt sen (+10.000đ)</label>
+                  <input type="checkbox" name="topping" value="10000" class="btn-check" id="tp-nhan" autocomplete="off">
+                  <label class="btn btn-outline-warning btn-choice" for="tp-nhan">Trái nhãn (+10.000đ)</label>
+                  <input type="checkbox" name="topping" value="10000" class="btn-check" id="tp-nhadam" autocomplete="off">
+                  <label class="btn btn-outline-warning btn-choice" for="tp-nhadam">Nhan đam (+10.000đ)</label>
+                </div>
+              </div>
+              <div class="qty-select">
+
+              </div>
+              <div class="row">
+                <div class="get-item-option item-decision">
+                  <div *ngIf="p.category == 'cafe'">
+                    <button type="reset" class="btn btn-warning btn-choice">Chọn lại</button>
+                  </div>
+                  <div *ngIf="p.category == 'cloudtea'">
+                    <button type="reset" class="btn btn-warning btn-choice">Chọn lại</button>
+                  </div>
+                  <div *ngIf="p.category == 'tea'">
+                    <button type="reset" class="btn btn-warning btn-choice">Chọn lại</button>
+                  </div>
+                  <button type="submit" class="btn btn-warning btn-choice">Thêm vào giỏ hàng</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <h5>Mô tả sản phẩm:</h5>
+          <p>{{p.description}}</p>
+<!--          <h5>Sản phẩm liên quan:</h5>-->
+<!--          <div *ngIf="p.category == 'cafe' ">-->
+<!--              <a routerLink="/products/{{p.id}}">-->
+<!--                <div class="card col-sm-3 row menu-item">-->
+<!--                  <img [src]="p.img" class="img-fluid">-->
+<!--                  <div class="card-body">-->
+<!--                    <h5>{{p.title}}</h5>-->
+<!--                    <p>{{p.price}}đ</p>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </a>-->
+<!--          </div>-->
+<!--          <div class="item-related row">-->
+<!--            <div class="col-3">-->
+<!--              <a href="cat_coffee_bacsiu.html"><div class="card">-->
+<!--                <img src="images/Bac%20siu.jpg" class="card-img-top" alt="bac siu">-->
+<!--                <div class="card-body">-->
+<!--                  <p class="card-text">Bạc sỉu</p>-->
+<!--                  <p class="card-text">29.000đ</p>-->
+<!--                </div>-->
+<!--              </div></a>-->
+<!--            </div>-->
+<!--            <div class="col-3">-->
+<!--              <a href="cat_coffee_suada.html"><div class="card">-->
+<!--                <img src="images/Cafe%20sua%20da.jpg" class="card-img-top" alt="cafe sua da">-->
+<!--                <div class="card-body">-->
+<!--                  <p class="card-text">Cà phê sữa đá</p>-->
+<!--                  <p class="card-text">29.000đ</p>-->
+<!--                </div>-->
+<!--              </div></a>-->
+<!--            </div>-->
+<!--            <div class="col-3">-->
+<!--              <a href="cat_coffee_denda.html"><div class="card">-->
+<!--                <img src="images/Cafe%20den%20da.jpg" class="card-img-top" alt="cafe den da">-->
+<!--                <div class="card-body">-->
+<!--                  <p class="card-text">Cà phê đen đá</p>-->
+<!--                  <p class="card-text">29.000đ</p>-->
+<!--                </div>-->
+<!--              </div></a>-->
+<!--            </div>-->
+<!--            <div class="col-3">-->
+<!--              <a href="cat_coffee_coldbrew_truyenthong.html"><div class="card">-->
+<!--                <img src="images/Cold%20brew%20truyen%20thong.webp" class="card-img-top" alt="coldbrew truyen thong">-->
+<!--                <div class="card-body">-->
+<!--                  <p class="card-text">Coldbrew truyền thống</p>-->
+<!--                  <p class="card-text">45.000đ</p>-->
+<!--                </div>-->
+<!--              </div></a>-->
+<!--            </div>-->
+<!--          </div>-->
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<script>
+
+  </script>
+

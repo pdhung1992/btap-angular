@@ -1,0 +1,21 @@
+.career{
+  margin-top: 80px;
+  margin-bottom: 10px;
+}
+.career .card-body{
+  text-align: center;
+  padding-left: unset;
+  padding-right: unset;
+}
+.store-career{
+  background-color: #ED713B;
+  color: #FFFFFF;
+}
+.office-career{
+  background-color: #EE933F;
+  color: #FFFFFF;
+}
+.career .card-footer a{
+  text-decoration: none;
+  color: #FFFFFF;
+}

@@ -1,0 +1,71 @@
+/* main */
+body{
+  color: #000000;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+  background-color: #FFFFFF;
+  font-weight: 400;
+  text-align: left;
+}
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: #000000;
+}
+
+/* header */
+header{
+  background-color: #E57905;
+  padding: 0 20px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  border-bottom: solid 2px #ffffff;
+}
+.header{
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+.main-menu{
+  text-align: center;
+}
+.main-menu .btn{
+  width: 100%;
+}
+.logo a{
+  color: #FFFFFF;
+  font-family: 'Pacifico', cursive;
+  display: flex;
+  justify-content: center;
+}
+.btn-outline-light{
+  border: none;
+}
+.cart-sum{
+  color: #FFFFFF;
+  border: 1px #FFFFFF solid;
+  border-radius: 10px;
+}
+.cart-item{
+  text-align: center;
+  justify-content: center;
+  line-height: 56px;
+}
+/* footer */
+footer{
+  background-color: #E57905;
+  width: 100%;
+}
+.wiget{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #FFFFFF;
+}
+.footer-desc{
+  text-align: justify;
+}

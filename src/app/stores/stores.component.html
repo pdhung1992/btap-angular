@@ -1,0 +1,74 @@
+<div class="container">
+  <div class="row">
+    <div class="col-3">
+      <div id="sidebar">
+        <div>
+          <h3 style="color: #E57905">Theo thành phố</h3>
+          <div>
+            <a routerLink="/stores/hn"><button class="btn btn-lg btn-outline-light btn-menu" style="width: 51%">
+              Hà Nội
+            </button></a>
+            <a routerLink="/stores/sg"><button class="btn btn-lg btn-outline-light btn-menu"style="width: 51%">
+              TP.Hồ Chí Minh
+            </button></a>
+            <a routerLink="/stores/dn"><button class="btn btn-lg btn-outline-light btn-menu"style="width: 51%">
+              Đà Nẵng
+            </button></a>
+            <a routerLink="/stores/hp"><button class="btn btn-lg btn-outline-light btn-menu"style="width: 51%">
+              Hải Phòng
+            </button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-9 store-all">
+      <h3 style="color: #E57905">Hệ thống cửa hàng</h3>
+      <div *ngFor="let s of stores">
+        <div class="col-sm-6 stores">
+          <div class="card">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img [src]="s.img1" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img [src]="s.img2" class="d-block w-100 " alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img [src]="s.img3" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div class="card-body">
+              <h4>{{s.tittle}}</h4>
+            </div>
+            <div class="card-footer">
+              <p>Add: {{s.add}}</p>
+              <p>Hotline: {{s.tel}}</p>
+              <button class="btn btn-light"><i class="bi bi-car-front-fill"></i> Có chỗ đỗ xe</button>
+              <button class="btn btn-light"><i class="bi bi-shop-window"></i> Phục vụ tại chỗ</button>
+              <button class="btn btn-light"><i class="bi bi-handbag"></i> Mua mang đi</button>
+              <button class="btn btn-light"><i class="bi bi-people"></i> Phù hợp với nhóm bạn</button>
+            </div>
+            <div class="card-footer">
+              <a routerLink="/map/{{s.id}}"><button class="btn btn-lg btn-outline-success" style="width: 100%">Xem bản đồ</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

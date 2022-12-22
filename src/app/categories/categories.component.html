@@ -1,0 +1,120 @@
+<<div class="row">
+  <div class="col-3">
+    <div class="slidebar">
+      <div>
+        <div *ngIf="cat == 'cafe'">
+            <h2 style="color: #E57905">Thực đơn</h2>
+          <a routerLink="/categories/cafe"><button class="btn btn-lg btn-outline-light btn-menu" style="width: 100%">
+            Cà phê
+          </button></a>
+          <a routerLink="/categories/tea"><button class="btn btn-lg btn-outline-light btn-menu" style="width: 100%">
+            Trà
+          </button></a>
+          <a routerLink="/categories/cloudtea"><button class="btn btn-lg btn-outline-light btn-menu" style="width: 100%">
+            CloudTea
+          </button></a>
+          <a routerLink="/categories/cake"><button class="btn btn-lg btn-outline-light btn-menu " style="width: 100%">
+            Bánh
+          </button></a>
+        </div>
+        <div *ngIf="cat == 'tea'">
+          <h2 style="color: #E57905">Thực đơn</h2>
+          <a routerLink="/categories/cafe"><button class="btn btn-lg btn-outline-light btn-menu" style="width: 100%">
+            Cà phê
+          </button></a>
+          <a routerLink="/categories/tea"><button class="btn btn-lg btn-outline-light btn-menu" style="width: 100%">
+            Trà
+          </button></a>
+          <a routerLink="/categories/cloudtea"><button class="btn btn-lg btn-outline-light btn-menu" style="width: 100%">
+            CloudTea
+          </button></a>
+          <a routerLink="/categories/cake"><button class="btn btn-lg btn-outline-light btn-menu" style="width: 100%">
+            Bánh
+          </button></a>
+        </div>
+        <div *ngIf="cat == 'cake'">
+          <h2 style="color: #E57905">Thực đơn</h2>
+          <a routerLink="/categories/cafe"><button class="btn btn-lg btn-outline-light btn-menu" style="width: 100%">
+            Cà phê
+          </button></a>
+          <a routerLink="/categories/tea"><button class="btn btn-lg btn-outline-light btn-menu" style="width: 100%">
+            Trà
+          </button></a>
+          <a routerLink="/categories/cloudtea"><button class="btn btn-lg btn-outline-light btn-menu" style="width: 100%">
+            CloudTea
+          </button></a>
+          <a routerLink="/categories/cake"><button class="btn btn-lg btn-outline-light btn-menu" style="width: 100%">
+            Bánh
+          </button></a>
+        </div>
+        <div *ngIf="cat == 'cloudtea'">
+          <h2 style="color: #E57905">Thực đơn</h2>
+          <a routerLink="/categories/cafe"><button class="btn btn-lg btn-outline-light btn-menu" style="width: 100%">
+            Cà phê
+          </button></a>
+          <a routerLink="/categories/tea"><button class="btn btn-lg btn-outline-light btn-menu" style="width: 100%">
+            Trà
+          </button></a>
+          <a routerLink="/categories/cloudtea"><button class="btn btn-lg btn-outline-light btn-menu" style="width: 100%">
+            CloudTea
+          </button></a>
+          <a routerLink="/categories/cake"><button class="btn btn-lg btn-outline-light btn-menu" style="width: 100%">
+            Bánh
+          </button></a>
+        </div>
+        <div *ngIf="cat == 'home-cafe'">
+          <h2 style="color: #E57905">Dùng tại nhà</h2>
+          <a routerLink="/categories/home-cafe"><button class="btn btn-lg btn-outline-light btn-menu" style="width: 70%">
+            Cà phê tại nhà
+          </button></a>
+          <a routerLink="/categories/home-tea"><button class="btn btn-lg btn-outline-light btn-menu"style="width: 70%">
+            Trà tại nhà
+          </button></a>
+          <a routerLink="/categories/snack"><button class="btn btn-lg btn-outline-light btn-menu"style="width: 70%">
+            Snack
+          </button></a>
+        </div>
+        <div *ngIf="cat == 'home-tea'">
+          <h2 style="color: #E57905">Dùng tại nhà</h2>
+          <a routerLink="/categories/home-cafe"><button class="btn btn-lg btn-outline-light btn-menu" style="width: 70%">
+            Cà phê tại nhà
+          </button></a>
+          <a routerLink="/categories/home-tea"><button class="btn btn-lg btn-outline-light btn-menu"style="width: 70%">
+            Trà tại nhà
+          </button></a>
+          <a routerLink="/categories/snack"><button class="btn btn-lg btn-outline-light btn-menu"style="width: 70%">
+            Snack
+          </button></a>
+        </div>
+        <div *ngIf="cat == 'snack'">
+          <h2 style="color: #E57905">Dùng tại nhà</h2>
+          <a routerLink="/categories/home-cafe"><button class="btn btn-lg btn-outline-light btn-menu" style="width: 70%">
+            Cà phê tại nhà
+          </button></a>
+          <a routerLink="/categories/home-tea"><button class="btn btn-lg btn-outline-light btn-menu"style="width: 70%">
+            Trà tại nhà
+          </button></a>
+          <a routerLink="/categories/snack"><button class="btn btn-lg btn-outline-light btn-menu"style="width: 70%">
+            Snack
+          </button></a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-9 menu-all" style="margin-top: 70px">
+    <div *ngFor="let a of products">
+      <div *ngIf="a.category == cat">
+        <a routerLink="/products/{{a.id}}">
+          <div class="card col-sm-4 row menu-item">
+            <img [src]="a.img" class="img-fluid">
+            <div class="card-body">
+              <h5>{{a.title}}</h5>
+              <p>{{a.price}}đ</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+.store-all{
+  margin-top: 80px;
+  z-index: 2;
+}
+.stores{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  float: left;
+}
+.card{
+  position: unset;
+}
+#sidebar{
+  position: fixed;
+  margin-top: 80px;
+}
+.carousel-inner{
+  box-sizing: border-box;
+}
+.btn-menu{
+  color: #E57905;
+  text-align: left;
+}
