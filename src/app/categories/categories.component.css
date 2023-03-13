@@ -19,9 +19,7 @@ a{
   float: left;
   margin: 10px;
   box-sizing: border-box;
-  padding: none;
   text-align: center;
-  height: ;
 }
 .menu-all{
   z-index: 2;

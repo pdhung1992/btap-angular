@@ -177,8 +177,18 @@
                 </div>
               </div>
               <div class="qty-select">
-
+                <div class="row">
+                  <div class="col-4">
+                    <h4>Số lượng:</h4>
+                  </div>
+                  <div class="col-4 row">
+                    <button type="button" (click)="removeItem()" class="btn btn-outline-danger col-4"><i class="bi bi-dash-lg"></i></button>
+                    <h3 class="col-4">{{qty}}</h3>
+                    <button type="button" (click)="addItem()" class="btn btn-outline-success col-4"><i class="bi bi-plus-lg"></i></button>
+                  </div>
+                </div>
               </div>
+              <br>
               <div class="row">
                 <div class="get-item-option item-decision">
                   <div *ngIf="p.category == 'cafe'">

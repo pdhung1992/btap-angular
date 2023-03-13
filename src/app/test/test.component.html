@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+    <div class="card col-3" *ngFor="let p of products">
+      <img src="{{p.img}}" class="img-fluid">
+      <div class="card-body">
+        <h4>{{p.title}}</h4>
+        <p>{{p.price}}</p>
+      </div>
+    </div>
+  </div>
+</div>

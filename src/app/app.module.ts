@@ -15,6 +15,7 @@ import { PromotionComponent } from './promotion/promotion.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { HomeComponent } from './home/home.component';
 import { MapComponent } from './map/map.component';
+import { TestComponent } from './test/test.component';
 
 
 const appRoutes: Routes = [
@@ -29,7 +30,8 @@ const appRoutes: Routes = [
   {path: 'newproducts', component: NewproductsComponent},
   {path: 'promotion', component: PromotionComponent},
   {path: 'checkout', component: CheckoutComponent},
-  {path: 'map/:id', component: MapComponent}
+  {path: 'map/:id', component: MapComponent},
+  {path: 'test', component: TestComponent}
 ]
 @NgModule({
   declarations: [
@@ -46,6 +48,7 @@ const appRoutes: Routes = [
     CheckoutComponent,
     HomeComponent,
     MapComponent,
+    TestComponent,
 
   ],
   imports: [
